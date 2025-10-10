@@ -2,8 +2,8 @@
 
 ## Student Details
 
-- **Full Name:** `<Reon Nguyen>`
-- **CCID:** `<ngoctha1>`
+- **Full Name:** `Reon Nguyen`
+- **CCID:** `ngoctha1`
 
 ## References and Resources
 
@@ -13,4 +13,4 @@
 
 | Student Name | CCID     |
 | ------------ | -------- |
-| `<NA>` | `<NA>` |
+| `NA`         | `NA`     |
