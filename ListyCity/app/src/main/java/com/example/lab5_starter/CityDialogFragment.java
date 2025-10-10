@@ -17,6 +17,7 @@ public class CityDialogFragment extends DialogFragment {
     interface CityDialogListener {
         void updateCity(City city, String title, String year);
         void addCity(City city);
+        void deleteCity(String name, String province);
     }
     private CityDialogListener listener;
 
@@ -68,10 +69,12 @@ public class CityDialogFragment extends DialogFragment {
                 .setPositiveButton("Continue", (dialog, which) -> {
                     String title = editMovieName.getText().toString();
                     String year = editMovieYear.getText().toString();
-                    if (Objects.equals(tag, "City Details")) {
-                        listener.updateCity(city, title, year);
-                    } else {
+                    if (Objects.equals(tag, "Delete City")) {
+                        listener.deleteCity(title, year);
+                    } else if (Objects.equals(tag, "Add City")) {
                         listener.addCity(new City(title, year));
+                    } else {
+                        listener.updateCity(city, title, year);
                     }
                 })
                 .create();
